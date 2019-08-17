@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>temperature convert</title>
+</head>
+<body style="background-image: url(img/sun-snowflake-air.jpg);background-repeat: no-repeat;background-size:auto">
+<script>
+var cel;
+var far;
+var kel;
+function celtokel()
+{ 
+document.getElementById("id1").src="img/kelvin.png";
+ cel=document.getElementById("tx1").value;
+  var x=parseFloat(cel);
+    kel=parseFloat(x+273.15);
+    document.getElementById("id3").innerHTML="TEMPERATURE IN KELVIN IS:"+kel;
+}
+function celtofaren()
+    {
+        document.getElementById("id1").src="img/farenheight.png";
+      cel=document.getElementById("tx1").value;
+      var y=parseFloat(cel);
+        far=parseFloat((9*y)/5+32);
+       document.getElementById("id3").innerHTML="TEMPERATURE IN FARENHIEGHT IS:"+far; 
+        
+    }
+</script>
+<strong><p style="margin-left: 860px">ENTER THE TEMPERATURE-</p></strong>
+<img id="id1"src="img/celsius.png" height="30%" width="30%">
+    <style>
+    input
+        {
+            margin-left: 840px;
+            height: 40px;
+            width: 290px;
+            font-size: 22px;
+            margin-bottom: 20px
+            
+        }
+    p
+        {   font-size: 26px;
+            margin-top: 0px;
+            margin-left: 40px;
+            color:darkblue;
+            font-family:fantasy
+            
+        }
+        img
+        {
+            margin-left:800px
+        }
+        
+        button
+        {
+            background-color:forestgreen;
+            text-align:"center";
+            border-color: black;
+            height: 40px;
+            width: 266px;
+            margin-left:860px;
+            border-radius: 10px
+        }
+    
+    </style>
+<input id="tx1" type="text"  placeholder="ENTER TEMPERATURE" >
+<br>
+<button onclick="celtofaren()"><p style="color: ghostwhite;text-align: left;font-family: inherit">FARENHIEGHT</p></button>
+<br>
+<button onclick="celtokel()"><p style="color: ghostwhite;text-align: left;font-family: inherit;text-align:center">KELVIN</p></button>
+<p id="id3" style="margin-left: 860px;margin-top: 90px;color:firebrick"></p>  
+</body>
+</html>
